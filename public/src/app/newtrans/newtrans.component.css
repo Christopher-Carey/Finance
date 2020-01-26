@@ -1,0 +1,12 @@
+.card{
+    padding: 20px;
+    height: 69px;
+    overflow: hidden;
+    color: black;
+}
+.card:hover{
+    height: auto;
+}
+.btn-dark{
+    background-color: #B0A8BA;
+}

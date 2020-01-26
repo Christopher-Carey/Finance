@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { ApiService } from '../api.service'
 import { ActivatedRoute, Params, Router } from '@angular/router';
 
@@ -28,6 +28,13 @@ export class LeftdataComponent implements OnInit {
       process: ""
     }
   }
+  ngOnChanges()	{
+    this.getTrans();
+  }
+  ngDoCheck(){
+
+  }
+
   getBalance() {
     for (var i = 0; i < this.allTrans.length; i++) {
       if (this.allTrans[i].process == "Withdraw") {

@@ -22,7 +22,10 @@ import { NewtransComponent } from './newtrans/newtrans.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [ApiService],
+  providers: [
+    ApiService,
+    LeftdataComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

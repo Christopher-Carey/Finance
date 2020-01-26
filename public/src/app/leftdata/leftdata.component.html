@@ -1,12 +1,15 @@
 <div class="card">
-    <div class="row">
-        <div class="col">
-            <h3>Welcome Christopher</h3>
-        </div>
-        <div class="col">
-            <h4>Balance</h4>
-            <h4>${{Balance}}</h4>
-        </div>
+    <div class="jumbotron">
+
+        <div class="row">
+            <div class="col">
+                <h3>Welcome Christopher</h3>
+            </div>
+            <div class="col">
+                <h4>Balance</h4>
+                <h2>${{Balance}}</h2>
+            </div>
+    </div>
     </div>
 
     <div *ngFor="let trans of allTrans" class="media border p-3">
@@ -16,7 +19,6 @@
         <h4>{{trans.name}} <small><i>Posted on {{trans.created_at}}</i></small></h4>
               <div class="row">
                   <div class="col">
-                    <!-- <input  [ngStyle]="{'display':name.errors || type.errors || desc.errors ? 'none' : 'block' }" class="btn btn-dark" type="submit" value="Add Pet"> -->
 
                       <h4 [ngStyle]="{'color':trans.process == 'Withdraw' ? 'red' : 'green' }">${{trans.amount}}.00</h4>
                   </div>

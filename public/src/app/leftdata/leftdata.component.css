@@ -1,6 +1,11 @@
 .card{
     padding: 20px;
+    box-shadow: 2px 2px 5px 2px #B0A8BA;
 }
 .media{
     margin-bottom: 15px;
+}
+.jumbotron{
+    background-color: #9B89B4;
+    color: white;
 }

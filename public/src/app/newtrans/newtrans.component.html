@@ -1,1 +1,23 @@
-<p>newtrans works!</p>
+<div class="card">
+    <h3>Try it Out</h3>
+    <form (submit)="createApiFromService()">
+        <div *ngFor="let err of errors">
+            <h4>-backend- Errors</h4>
+            <p>{{err}}</p>
+        </div>
+        <label>Place</label>
+        <input class="form-control" type="text" name="name" required minlength="2"[(ngModel)]="NewTransaction.name" #name="ngModel">
+        <label>Amount</label>
+        <input class="form-control" type="text" name="amount" required minlength="2"[(ngModel)]="NewTransaction.amount" #amount="ngModel">
+        <label>Process</label>
+        <select class="form-control" type="text" name="process" required minlength="2"[(ngModel)]="NewTransaction.process" #process="ngModel">
+            <option value="Withdraw">Withdraw</option>
+            <option value="Deposit">Deposit</option>
+          </select>
+        <input class="btn-dark" type="submit">
+    </form>
+</div>
+
+<div *ngFor="let trans of allTrans">
+    <p>{{trans.transactions}}</p>
+</div>
