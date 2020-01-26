@@ -1,0 +1,81 @@
+<div class="card">
+    <div class="row">
+        <div class="col">
+            <h3>Welcome Christopher</h3>
+        </div>
+        <div class="col">
+            <h4>Balance</h4>
+            <h4>${{Balance}}</h4>
+        </div>
+    </div>
+
+    <div *ngFor="let trans of allTrans" class="media border p-3">
+        <i class="fas fa-3x fa-money-check-alt mr-3 mt-3 rounded-circle" style="width:60px;"></i>
+        <!-- <img src="img_avatar3.png" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:60px;"> -->
+        <div class="media-body">
+        <h4>{{trans.name}} <small><i>Posted on {{trans.created_at}}</i></small></h4>
+              <div class="row">
+                  <div class="col">
+                    <!-- <input  [ngStyle]="{'display':name.errors || type.errors || desc.errors ? 'none' : 'block' }" class="btn btn-dark" type="submit" value="Add Pet"> -->
+
+                      <h4 [ngStyle]="{'color':trans.process == 'Withdraw' ? 'red' : 'green' }">${{trans.amount}}.00</h4>
+                  </div>
+                  <div class="col">
+                      {{trans.process}}
+                  </div>
+              </div>
+        </div>
+      </div>
+
+
+    <!-- <div *ngFor="let trans of allTrans">
+        <p>{{trans.amount}}</p>
+    </div> -->
+
+</div>
+
+
+
+
+
+<!-- <div class="card">
+    <form (submit)="createApiFromService()">
+        <div *ngFor="let err of errors">
+            <h4>-backend- Errors</h4>
+            <p>{{err}}</p>
+        </div>
+        <label>Amount</label> -->
+        <!-- <div style="color: red;" *ngIf="!name.valid">Pet Name Errors -Check Pet Name</div> -->
+        <!-- <input class="form-control" type="text" name="transactions" required minlength="2"[(ngModel)]="NewTransaction.transactions" #transaction="ngModel">
+        <input class="btn-dark" type="submit">
+    </form>
+</div>
+
+<div *ngFor="let trans of allTrans">
+    <p>{{trans.transactions}}</p>
+</div> -->
+
+
+
+<!-- <form (submit)="createApiFromService()">
+    <div *ngFor="let err of errors">
+        <h4>-backend- Errors</h4>
+        <p>{{err}}</p>
+    </div>
+    <label>Pet Name: </label>
+    <div style="color: red;" *ngIf="!name.valid">Pet Name Errors -Check Pet Name</div>
+    <input class="form-control" type="text" name="name" required minlength="2"[(ngModel)]="newPet.name" #name="ngModel">
+    <label>Pet Type:</label>
+    <div style="color: red;" *ngIf="!type.valid">Pet Type Errors -Check Pet Type</div>
+    <input class="form-control" type="text" name="type" required minlength="2" maxlength="24" [(ngModel)]="newPet.type" #type="ngModel">
+    <label>Description:</label>
+    <div style="color: red;" *ngIf="!desc.valid"> Description Errors -Check Description</div>
+    <input class="form-control" type="text" name="desc" required minlength="2" [(ngModel)]="newPet.desc" #desc="ngModel">
+    <label>Skills:</label>
+    <input style="width: 50%;" class="form-control" type="text" name="newPet.Skills[0]" [(ngModel)]="newPet.Skills[0]">
+    <input style="width: 50%;" class="form-control" type="text" name="newPet.Skills[1]" [(ngModel)]="newPet.Skills[1]">
+    <input style="width: 50%;" class="form-control" type="text" name="newPet.Skills[1]" [(ngModel)]="newPet.Skills[2]">
+    <input  [ngStyle]="{'display':name.errors || type.errors || desc.errors ? 'none' : 'block' }" class="btn btn-dark" type="submit" value="Add Pet">
+</form> -->
+
+

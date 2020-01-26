@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 
 const FinanceSchema = new mongoose.Schema({
     name: String,
-    balance: Number,
-    transactions: Array,
-    description:String
+    amount: Number,
+    created_at: Date,
+    process: String
 })
-mongoose.model('Finance', FinanceSchema);
+mongoose.model('finance', FinanceSchema);
