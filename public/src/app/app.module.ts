@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { ApiService } from './api.service';
 import { RightdataComponent } from './rightdata/rightdata.component';
 import { LeftdataComponent } from './leftdata/leftdata.component';
+import { NewtransComponent } from './newtrans/newtrans.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RightdataComponent,
-    LeftdataComponent
+    LeftdataComponent,
+    NewtransComponent
   ],
   imports: [
     BrowserModule,
