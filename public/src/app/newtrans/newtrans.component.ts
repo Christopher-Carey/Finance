@@ -34,11 +34,13 @@ export class NewtransComponent implements OnInit {
       if(results['results']){
         console.log("ts re")
         this.NewTransaction = {
-          name:'',
-          type:'',
-          desc: '',
-          Skills: []
+          name: "",
+          amount: "",
+          created_at: "",
+          process: ""
         }
+          location.reload();
+    
         // this.leftdata.getTrans();
         // this._router.navigate(['/']);
       }else if(results['error']){
@@ -53,6 +55,4 @@ export class NewtransComponent implements OnInit {
       }
     })
   }
-
-
 }

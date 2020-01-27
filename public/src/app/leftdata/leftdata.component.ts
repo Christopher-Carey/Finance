@@ -21,13 +21,9 @@ export class LeftdataComponent implements OnInit {
 
   ngOnInit() {
     this.getTrans();
-    this.NewTransaction = {
-      name: "",
-      amount: "",
-      created_at: "",
-      process: ""
-    }
   }
+
+  
   ngOnChanges()	{
     this.getTrans();
   }
@@ -39,9 +35,12 @@ export class LeftdataComponent implements OnInit {
     for (var i = 0; i < this.allTrans.length; i++) {
       if (this.allTrans[i].process == "Withdraw") {
         this.Balance -= this.allTrans[i].amount;
-      } else if (this.allTrans[i].process == "Deposit") {
+      }else{
         this.Balance += this.allTrans[i].amount;
       }
+      // if (this.allTrans[i].process == "Deposit") {
+      //   this.Balance += this.allTrans[i].amount;
+      // }
     }
   }
   getTrans() {
@@ -49,8 +48,11 @@ export class LeftdataComponent implements OnInit {
     observable.subscribe(results => {
       console.log("yay", results)
       this.allTrans = results['results']
-      this._apiService.getApis()
+      // this._apiService.getApis()
       this.getBalance();
     })
   }
+  formattedDate(date) {
+    return date.format("DD/MM/YYYY")
+}
 }

@@ -9,6 +9,8 @@
         <input class="form-control" type="text" name="name" required minlength="2"[(ngModel)]="NewTransaction.name" #name="ngModel">
         <label>Amount</label>
         <input class="form-control" type="text" name="amount" required minlength="2"[(ngModel)]="NewTransaction.amount" #amount="ngModel">
+        <label>Date</label>
+        <input class="form-control" type="date" name="created_at" required minlength="2"[(ngModel)]="NewTransaction.created_at" #created_at="ngModel">
         <label>Process</label>
         <select class="form-control" type="text" name="process" required minlength="2"[(ngModel)]="NewTransaction.process" #process="ngModel">
             <option value="Withdraw">Withdraw</option>
