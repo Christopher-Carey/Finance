@@ -2,3 +2,11 @@
     padding: 20px;
     box-shadow: 2px 2px 5px 2px #B0A8BA;
 }
+h2{
+    margin: 0 auto;
+}
+.jumbotron{
+    background-color: #9B89B4;
+    color: white;
+    text-align: center;
+}

@@ -54,7 +54,7 @@ export class RightdataComponent implements OnInit {
                 data: {
                     labels: ["Deposits", "Withdraws", "Balance"],
                     datasets: [{
-                        label: '# of Votes',
+                        label: 'Account Overview',
                         data: [this.Deposits, this.WithDraws, this.Balance],
                         backgroundColor: [
                             'rgba(75, 192, 192, 0.2)',
@@ -77,7 +77,7 @@ export class RightdataComponent implements OnInit {
                 },
                 options: {
                     title: {
-                        text: "Over View",
+                        text: "Account OverView",
                         display: true
                     },
                     scales: {

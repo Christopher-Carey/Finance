@@ -1,12 +1,22 @@
 .card{
     padding: 20px;
     height: 69px;
+    width: 400px;
+    margin: 0 auto;
     overflow: hidden;
-    color: black;
+    color:  #9B89B4;
+    -webkit-transition-duration: 1s;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+    transition-property: height;
+
 }
 .card:hover{
-    height: auto;
+    height: 400px;
 }
 .btn-dark{
     background-color: #B0A8BA;
+    border-color:  #9B89B4;
+    margin-top: 20px;
+    
 }
